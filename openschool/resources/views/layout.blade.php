@@ -2,11 +2,29 @@
     <head>
 		<title> @yield('title') </title>
 <style>
-    .pull-right
-    {
-        float: right;
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v129/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
 
-    }
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
     .card {
     margin: 1rem 13px;
     }
@@ -20,6 +38,9 @@
         <link rel="stylesheet" type="text/css" href="{{URL::asset('css/app-assets/css/themes/vertical-gradient-menu-template/materialize.min.css')}}">
         <link rel="stylesheet" type="text/css" href="{{URL::asset('css/app-assets/css/themes/vertical-gradient-menu-template/style.min.css')}}">
         <link rel="stylesheet" type="text/css" href="{{URL::asset('css/app-assets/css/custom/custom.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{URL::asset('css\app-assets\fonts\fontawesome\css\all.min.css')}}">
+
+
 
         <script src="{{URL::asset('css/app-assets/js/vendors.min.js')}}"></script>
         <script src="{{URL::asset('css/app-assets/js/plugins.min.js')}}"></script>
