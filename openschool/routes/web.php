@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\TimetableController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/test', function () {
+    return view('test');
 });
+
+Route::get("/",[TimetableController::class,'getTimetable']);
+Route::get('addtimetable',[TimetableController::class,'add'])->name('addtimetable');
+Route::get('/get_sub/{id}',[TimetableController::class,'get_sub']);
+Route::post('posttimetable',[TimetableController::class,'addTimeT']);
