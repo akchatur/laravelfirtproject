@@ -143,6 +143,9 @@
 {{ Form::close() }}
 <script>
  $(document).ready(function(){
+
+
+
     $('.timepicker').timepicker();
 
 	$("#course").on('change', function(){
