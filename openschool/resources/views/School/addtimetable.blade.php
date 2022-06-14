@@ -1,29 +1,32 @@
 @extends('layout')
 @section('title','Add Time Table')
 @section('container')
-
+<style>
+    .error-message
+    {
+        color:red;
+    }
+    .alert-success1
+    {
+        color:red;
+    }
+    </style>
 
 
 
 <div id="Form-advance" class="card card card-default scrollspy">
+
 {{Form::open(array('url' => 'posttimetable', 'method' => 'post'))}}
 @csrf
+
+
   <div class="card-content">
     <h4 class="card-title">Add Time Table</h4>
     <form>
 
     <div class="row">
 
-        <div class="input-field col m6 s12">
-            <div class="select-wrapper"><input class="cc" type="text" readonly="true" data-target="select-options-526a614d-ce98-4747-b7f5-6f72fbaa7e5a">
-                <ul id="select-options-526a614d-ce98-4747-b7f5-6f72fbaa7e5a" class="dropdown-content select-dropdown" tabindex="0" style=""><li class="disabled selected" id="select-options-526a614d-ce98-4747-b7f5-6f72fbaa7e5a0" tabindex="0"><span>Choose your profile</span></li><li id="select-options-526a614d-ce98-4747-b7f5-6f72fbaa7e5a1" tabindex="0"><span>Manager</span></li><li id="select-options-526a614d-ce98-4747-b7f5-6f72fbaa7e5a2" tabindex="0"><span>Developer</span></li><li id="select-options-526a614d-ce98-4747-b7f5-6f72fbaa7e5a3" tabindex="0"><span>Business</span></li></ul><svg class="caret" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><select tabindex="-1">
-              <option value="" disabled="" selected="">Choose your profile</option>
-              <option value="1">Manager</option>
-              <option value="2">Developer</option>
-              <option value="3">Business</option>
-            </select></div>
-            <label>Select Profile</label>
-          </div>
+
 
 
 		<div class="input-field col m6 s12">

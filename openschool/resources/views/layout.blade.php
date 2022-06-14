@@ -1,6 +1,16 @@
 <html>
     <head>
 		<title> @yield('title') </title>
+<style>
+    .pull-right
+    {
+        float: right;
+
+    }
+    .card {
+    margin: 1rem 13px;
+    }
+    </style>
         <link rel="stylesheet" href="{{URL::asset('css/app-assets/css/custom/custom.css')}}"/>
         <link rel="stylesheet" href="{{URL::asset('css/app-assets/css/themes/vertical-gradient-menu-template/materialize.min.css')}}"/>
 
@@ -23,6 +33,25 @@
 
 
 		@include('header')
+        @if(session()->has('message'))
+        <div class="card-alert card green">
+            <div class="card-content white-text">
+              <p>
+
+                <div class="alert alert-success1">
+                    {{ session()->get('message') }}
+                </div>
+
+        </p>
+            </div>
+
+
+            <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          @endif
+
 
 		@section('container')
 

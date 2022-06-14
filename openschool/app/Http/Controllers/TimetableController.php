@@ -40,11 +40,12 @@ class TimetableController extends Controller
     'exam_date' => 'required',
     'exam_time_start'=>'required'
 ]);
-$data=$request->all();
-$data['exam_date'] = date("Y-m-d",strtotime($data['exam_date']));
+    $data=$request->all();
+    $data['exam_date'] = date("Y-m-d",strtotime($data['exam_date']));
 
     Timetable::create($data);
-    return view('School.addtimetable')->with('success', 'Subject created successfully.')->with('subjects');
+    return redirect()->route('home')->with('message', 'IT WORKS!');
+  //  return redirect('School.addtimetable')->with('success', 'Timetable created successfully.');
 
     }
     public function  getTimetable()
@@ -56,7 +57,7 @@ $data['exam_date'] = date("Y-m-d",strtotime($data['exam_date']));
        $showtimetable = Timetable::paginate(10);
         //dd($showtimetable);
 
-            return view("School.show", compact('showtimetable','subject'));
+           return view("show", compact('showtimetable','subject'));
 
     }
 }

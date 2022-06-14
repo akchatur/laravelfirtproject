@@ -19,7 +19,7 @@ Route::get('/test', function () {
     return view('test');
 });
 
-Route::get("/",[TimetableController::class,'getTimetable']);
+Route::get("/",[TimetableController::class,'getTimetable'])->name('home');
 Route::get('addtimetable',[TimetableController::class,'add'])->name('addtimetable');
 Route::get('/get_sub/{id}',[TimetableController::class,'get_sub']);
 Route::post('posttimetable',[TimetableController::class,'addTimeT']);
