@@ -41,8 +41,9 @@ class TimetableController extends Controller
     'exam_time_start'=>'required'
 ]);
     $data=$request->all();
+    //dd($data);
     $data['exam_date'] = date("Y-m-d",strtotime($data['exam_date']));
-
+//dd($data['exam_date']);
     Timetable::create($data);
     return redirect()->route('home')->with('message', 'IT WORKS!');
   //  return redirect('School.addtimetable')->with('success', 'Timetable created successfully.');

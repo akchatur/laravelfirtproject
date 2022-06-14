@@ -27,8 +27,6 @@
         <script src="{{URL::asset('css/app-assets/js/custom/custom-script.min.js')}}"></script>
         <script src="{{URL::asset('css/app-assets/js/scripts/customizer.min.js')}}"></script>
 
-
-
     </head>
 	<body class="d-flex flex-column h-100">
 

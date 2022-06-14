@@ -142,8 +142,9 @@
 </div>
 {{ Form::close() }}
 <script>
- $(document).ready(function(){
-
+ //$(document).ready(function(){
+$(function()
+{
 
 
     $('.timepicker').timepicker();
