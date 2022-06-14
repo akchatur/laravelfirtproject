@@ -51,9 +51,7 @@ class TimetableController extends Controller
     }
     public function  getTimetable()
     {
-
-
-       $subject = Subject::orderBy('id')->pluck('name','id')->toArray();
+      $subject = Subject::orderBy('id')->pluck('name','id')->toArray();
        // dd($subject);
        $showtimetable = Timetable::paginate(10);
         //dd($showtimetable);
